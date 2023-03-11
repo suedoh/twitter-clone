@@ -37,11 +37,11 @@ The projects Docker Compose file is configured for running the following service
     - Hasura GraphQL Engine
     - PgAdmin
 
-###Requirements
+### Requirements
     - Docker
     - Docker Compose
 
-###Usage
+### Usage
 
     1. Clone this repository
     2. Create a .env file based on .env.example
@@ -52,7 +52,7 @@ The projects Docker Compose file is configured for running the following service
     - Hasura Console: http://localhost:8080/console
     - Prisma Studio: http://localhost:5555
 
-###Postgres
+### Postgres
 
 The Postgres service provides a database for the other services to use. By default, it runs on port 5432.
 
@@ -71,14 +71,14 @@ docker-compose up -d prisma
 ```
 Prisma Studio will be available at http://localhost:5555.
 
-###Hasura GraphQL Engine
+### Hasura GraphQL Engine
 
 The Hasura GraphQL Engine provides a GraphQL API for your database. It allows you to quickly create a GraphQL API without writing any server-side code.
 
 To use Hasura, you need to configure your database connection in hasura/config.yaml. Once you've done that, you can run the following command to start the Hasura server:
 Hasura Console will be available at http://localhost:8080/console.
 
-###PgAdmin
+### PgAdmin
 
 PgAdmin is a web-based database management tool for Postgres. It provides a web UI for exploring and editing your database.
 
