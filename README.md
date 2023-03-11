@@ -51,6 +51,7 @@ The projects Docker Compose file is configured for running the following service
     - PgAdmin: http://localhost:5050
     - Hasura Console: http://localhost:8080/console
     - Prisma Studio: http://localhost:5555
+    - Redis: http://localhost:6379
 
 ### Postgres
 
@@ -71,13 +72,6 @@ docker-compose up -d prisma
 ```
 Prisma Studio will be available at http://localhost:5555.
 
-### Hasura GraphQL Engine
-
-The Hasura GraphQL Engine provides a GraphQL API for your database. It allows you to quickly create a GraphQL API without writing any server-side code.
-
-To use Hasura, you need to configure your database connection in hasura/config.yaml. Once you've done that, you can run the following command to start the Hasura server:
-Hasura Console will be available at http://localhost:8080/console.
-
 ### PgAdmin
 
 PgAdmin is a web-based database management tool for Postgres. It provides a web UI for exploring and editing your database.
@@ -92,6 +86,34 @@ Once you've done that, you can run the following command to start the PgAdmin se
 docker-compose up -d pgadmin
 ```
 PgAdmin will be available at http://localhost:5050.
-Teardown
+
+### Hasura GraphQL Engine
+
+The Hasura GraphQL Engine provides a GraphQL API for your database. It allows you to quickly create a GraphQL API without writing any server-side code.
+
+To use Hasura, you need to configure your database connection in hasura/config.yaml. Once you've done that, you can run the following command to start the Hasura server:
+Hasura Console will be available at http://localhost:8080/console.
+
+### Redis
+
+Redis is an in-memory data structure store used as a database, cache, and message broker. This Docker Compose file sets up a Redis service running on port 6379.
+
+You can connect to Redis using a Redis client library or command-line tool. The Redis URL for this Docker Compose file is redis://localhost:6379.
+
+Instructions to interact with Redis container:
+
+1. Start the Docker Compose stack by running the following command in the project directory:
+`docker-compose up -d`
+2. Connect to the Redis container by running the following command:
+`docker-compose exec redis redis-cli`
+This will open a Redis command line interface where you can interact with Redis.
+3. To test if Redis is working correctly, you can set a key-value pair using the set command:
+`set mykey "Hello Redis"`
+4. You can retrieve the value of the key using the get command:
+`get mykey`
+5. This should output Hello Redis.
+You can exit the Redis command line interface by running the `exit` command.
+
+### Teardown
 
 To stop the services, run docker-compose down. This will stop and remove all containers and networks created by Docker Compose.
