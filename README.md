@@ -27,6 +27,21 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
 
+## Usage
+Running for the first time? Follow these steps:
+
+    1. Clone this repository
+    2. Create a .env file based on .env.example
+    3. Run `docker-compose up -d` to start the services in the background
+    4. Verify that the services are running by visiting the following URLs:
+    5. run `pnpm i` && `pnpm build` && `pnpm start` for first time run
+
+    - PgAdmin: http://localhost:8080
+    - Hasura Console: http://localhost:8080/console
+    - Prisma Studio: http://localhost:5555
+    - Redis: http://localhost:6379
+
+
 ## Running Services with Docker Compose
 
 The projects Docker Compose file is configured for running the following services locally:
@@ -40,18 +55,6 @@ The projects Docker Compose file is configured for running the following service
 ### Requirements
     - Docker
     - Docker Compose
-
-### Usage
-
-    1. Clone this repository
-    2. Create a .env file based on .env.example
-    3. Run docker-compose up -d to start the services in the background
-    4. Verify that the services are running by visiting the following URLs:
-
-    - PgAdmin: http://localhost:5050
-    - Hasura Console: http://localhost:8080/console
-    - Prisma Studio: http://localhost:5555
-    - Redis: http://localhost:6379
 
 ### Postgres
 
