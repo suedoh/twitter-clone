@@ -12,6 +12,7 @@ specifiers:
   eslint-config-next: 13.1.1
   next: 13.1.1
   next-auth: ^4.18.7
+  pnpm: ^7.29.1
   postcss: ^8.4.14
   prettier: ^2.8.1
   prettier-plugin-tailwindcss: ^0.2.1
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.18.7_q76c2b4vyoegvsbrcwkfvimnai
+  pnpm: 7.29.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   zod: 3.20.2
@@ -2030,6 +2032,12 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /pnpm/7.29.1:
+    resolution: {integrity: sha512-dn+65B2XpMIin7sQZvBIJ2Zyx8Z7LK95qyAvgEPE8qXkWYL/LuwpfMfK9Muc7+zNnpPwiQgtGEsxgOtuabFibQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: false
 
   /postcss-import/14.1.0_postcss@8.4.20:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
