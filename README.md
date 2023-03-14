@@ -37,7 +37,7 @@ Running for the first time? Follow these steps:
     5. run `pnpm i` && `pnpm build` && `pnpm start` for first time run
 
     - PgAdmin: http://localhost:8080
-    - Hasura Console: http://localhost:8080/console
+    - Hasura Console: http://localhost:8081/console
     - Prisma Studio: http://localhost:5555
     - Redis: http://localhost:6379
 
@@ -61,10 +61,13 @@ The projects Docker Compose file is configured for running the following service
 The Postgres service provides a database for the other services to use. By default, it runs on port 5432.
 
 To connect to the database, you can use any Postgres client, such as psql or PgAdmin.
-Redis
+
+### Redis
 
 The Redis service provides a cache for the other services to use. By default, it runs on port 6379.
-Prisma
+
+
+### Prisma
 
 The Prisma service provides a migration tool and database client for your Postgres database. It also provides a web UI called Prisma Studio for exploring and editing your database.
 
@@ -88,14 +91,14 @@ Once you've done that, you can run the following command to start the PgAdmin se
 ```
 docker-compose up -d pgadmin
 ```
-PgAdmin will be available at http://localhost:5050.
+PgAdmin will be available at http://localhost:8080.
 
 ### Hasura GraphQL Engine
 
 The Hasura GraphQL Engine provides a GraphQL API for your database. It allows you to quickly create a GraphQL API without writing any server-side code.
 
 To use Hasura, you need to configure your database connection in hasura/config.yaml. Once you've done that, you can run the following command to start the Hasura server:
-Hasura Console will be available at http://localhost:8080/console.
+Hasura Console will be available at http://localhost:8081/console.
 
 ### Redis
 
