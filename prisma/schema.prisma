@@ -10,8 +10,13 @@ datasource db {
   url      = env("PRISMA_DATABASE_URL")
 }
 
+// still in 'feature-auth' branch, we'll expand other models as we continue
+
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id           String  @id  @unique
+  email        String  @db.VarChar(30) @unique
+  username     String  @db.VarChar(20) @unique
+  name         String? @db.VarChar(30)
+  profileImage String  @db.VarChar(100)
+  bio          String? @db.VarChar(100)
 }
