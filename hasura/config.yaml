@@ -1,0 +1,11 @@
+# hasura/config.yaml
+version: "2"
+
+database:
+  url: postgres://postgres:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+  pool_settings:
+    idle_timeout: 180
+    max_connections: 50
+    retries: 3
+    timeout: 30
+
